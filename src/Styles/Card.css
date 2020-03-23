@@ -1,17 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
+
+
+
 .cardContainer {
-    display: flex; 
+    /* display: flex;  */
     display: grid; 
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     /* flex-direction: row;
     flex-wrap: wrap;  */
     /* width: 120px; */
+    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #cardImage {
     height: 100px;
     width: 100px;
+    border-radius: 10rem;
 }
 
 .card {
     width: 120px;
+    border: solid;
+    box-shadow: 0px 0px 8px gray;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 12px;
+    border-radius: 1rem;
+    font-family: 'Inconsolata', monospace;
+}
+
+.card:hover {
+    box-shadow: 0px 8px 16px gray;
+}
+
+#cartButton {
+    font-family: 'Inconsolata', monospace;
+    font-size: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 4px gray;
+}
+
+#cardButton:active {
+    box-shadow: 0px 8px 16px gray;
 }

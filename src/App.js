@@ -8,7 +8,8 @@ import {Route, Switch} from 'react-router-dom'
 class App extends React.Component {
   
   state = {
-    items: []
+    items: [],
+    cart: []
   }
   
   componentDidMount() {
@@ -20,6 +21,13 @@ class App extends React.Component {
       })
   })
   }
+
+  addItemToCart = (item) => {
+    this.setState({cart: [...this.state.cart, item]})
+
+
+    //post to backend 
+  }
   
   
   
@@ -29,7 +37,7 @@ class App extends React.Component {
         <Switch> 
           {/* <LandingPage /> */}
           <Route exact path='/' component={LandingPage} />
-          <Route path='/items' render={(props) => <Items items={this.state.items} />} /> 
+          <Route path='/items' render={(props) => <Items items={this.state.items} cart={this.state.cart} addItemToCart={this.addItemToCart} />} /> 
           <Route path='/cart' component={Cart}/>
         </Switch>
       </div>

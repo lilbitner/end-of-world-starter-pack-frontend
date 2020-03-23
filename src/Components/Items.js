@@ -8,7 +8,7 @@ export default class Items extends React.Component{
     
     showItems = (props) => {
         return this.props.items.map(item => {
-           return <Card item={item} key={item.id} />
+           return <Card item={item} key={item.id} addItem={this.props.addItemToCart} />
         })
     }
 
