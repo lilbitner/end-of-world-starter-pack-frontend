@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
+
+.NavBar{
+    display: flex;
+    justify-content: space-between;
+    height: 2em;
+    background-color: black;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.3em;
+    padding: 0.5em;
+}
+
+.NavBar-links{
+padding-right: 0.5em;
+text-decoration: none;
+color: white;
+}
+
+.NavBar-links:hover{
+color: greenyellow;
+}
