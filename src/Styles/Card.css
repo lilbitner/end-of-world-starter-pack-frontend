@@ -1,0 +1,17 @@
+.cardContainer {
+    display: flex; 
+    display: grid; 
+    grid-template-columns: repeat(4, auto);
+    /* flex-direction: row;
+    flex-wrap: wrap;  */
+    /* width: 120px; */
+}
+
+#cardImage {
+    height: 100px;
+    width: 100px;
+}
+
+.card {
+    width: 120px;
+}
