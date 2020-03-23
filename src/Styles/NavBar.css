@@ -3,8 +3,9 @@
 .NavBar{
     display: flex;
     justify-content: space-between;
-    height: 2em;
-    background-color: black;
+    height: 8em;
+    background: rgb(0,6,6);
+    background: linear-gradient(0deg, rgba(0,6,6,1) 49%, rgba(18,59,31,1) 100%);
     font-family: 'Inconsolata', monospace;
     font-size: 1.3em;
     padding: 0.5em;
@@ -14,6 +15,7 @@
 padding-right: 0.5em;
 text-decoration: none;
 color: white;
+width: 12em;
 }
 
 .NavBar-links:hover{

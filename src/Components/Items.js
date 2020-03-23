@@ -17,7 +17,6 @@ export default class Items extends React.Component{
         return(
           <>
           <NavBar />
-          <Header />
           <div className='cardContainer'> 
             {this.showItems()}
           </div>

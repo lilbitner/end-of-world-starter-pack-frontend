@@ -1,0 +1,31 @@
+.LandingPage-container{
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+
+.LandingPage-virus-image{
+    width: 32em;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+
+.enterButton{
+    width: 150px;
+    height: 30px;
+    border-radius: 1em;
+}
+
+.LandingPage-text{
+    font-size: 4em;
+    color: white;
+}
+
+.LandingPage-sub-text{
+    color: white;
+    font-size: 1.5em;
+    margin-top: -1.5em;
+}

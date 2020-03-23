@@ -3,12 +3,9 @@
 
 
 .cardContainer {
-    /* display: flex;  */
+
     display: grid; 
     grid-template-columns: repeat(5, auto);
-    /* flex-direction: row;
-    flex-wrap: wrap;  */
-    /* width: 120px; */
     justify-content: center;
     justify-content: space-evenly;
 }
@@ -20,13 +17,15 @@
 }
 
 .card {
-    width: 120px;
-    border: solid;
-    box-shadow: 0px 0px 8px gray;
+    width: 140px;
+    border: 0.5px solid grey;
+    padding: 10px;
+    box-shadow: 5px 10px 8px #888888;
     margin-bottom: 1rem;
     margin-top: 1rem;
     font-size: 12px;
     border-radius: 1rem;
+    text-align: center;
     font-family: 'Inconsolata', monospace;
 }
 
