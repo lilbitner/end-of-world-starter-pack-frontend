@@ -13,20 +13,27 @@ class App extends React.Component {
   }
   
   componentDidMount() {
-  fetch('https://rickandmortyapi.com/api/character/')
+  fetch('http://localhost:3000/items')
   .then(response => response.json())
-  .then(characters => {
+  .then(items => {
+    const cart = items.filter(item => item.cart_id)
       this.setState({
-        items: characters.results
+        items: items,
+        cart: cart 
       })
   })
   }
 
   addItemToCart = (item) => {
-    this.setState({cart: [...this.state.cart, item]})
+    this.setState({cart: [...this.state.cart, {...item}]
+    })
+    fetch(`http://localhost:3000/add_item_to_cart/${item.id}`) 
+  }
 
-
-    //post to backend 
+  removeItemFromCart = (item) => {
+    this.setState({cart: this.state.cart.filter(oldItem => oldItem.id !== item.id )
+  })
+  fetch(`http://localhost:3000/remove_item_from_cart/${item.id}`)
   }
   
   
@@ -37,8 +44,8 @@ class App extends React.Component {
         <Switch> 
           {/* <LandingPage /> */}
           <Route exact path='/' component={LandingPage} />
-          <Route path='/items' render={(props) => <Items items={this.state.items} cart={this.state.cart} addItemToCart={this.addItemToCart} />} /> 
-          <Route path='/cart' component={Cart}/>
+          <Route path='/items' render={(props) => <Items items={this.state.items} addItemToCart={this.addItemToCart} />} /> 
+          <Route path='/cart' render={(props) => <Cart removeItemFromCart={this.removeItemFromCart} cart={this.state.cart}/>}/>
         </Switch>
       </div>
     );

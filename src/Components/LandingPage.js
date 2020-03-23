@@ -12,7 +12,7 @@ export default function LandingPage(props) {
 
             <div className="text-container">
                 <h1 className="LandingPage-text"> The Year is 2020.</h1>
-                <h3 className="LandingPage-sub-text"> A virus has hit worldwide and you need to quarentine. </h3>
+                <h3 className="LandingPage-sub-text"> A virus has hit worldwide and you need to quarantine. </h3>
             <button className='enterButton' onClick={() =>  props.history.push('/items')}>
                 Enter
             </button>
