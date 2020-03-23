@@ -1,7 +1,7 @@
 .header-container{
-    height: 9em;
+    padding-top: 1.5em;
+    height: 7em;
     width: 100%;
-    background-color: black;
     display: flex;
     justify-content: center;
 }
